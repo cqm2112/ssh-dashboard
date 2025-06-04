@@ -51,7 +51,9 @@ io.on('connection', (socket) => {
     });
   });
 });
-
+app.get('/', (req, res) => {
+  res.send('Servidor backend corriendo');
+});
 server.listen(port, '0.0.0.0', () => {
   console.log(`Servidor backend corriendo en http://0.0.0.0:${port}`);
 });
